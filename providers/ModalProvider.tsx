@@ -1,5 +1,6 @@
 'use client'
 
+import Modal from '@/components/Modal'
 import { useEffect, useState } from 'react'
 
 const ModalProvider = () => {
@@ -13,7 +14,16 @@ const ModalProvider = () => {
     return null
   }
 
-  return <>Modals!</>
+  return (
+    <Modal
+      title="Test Modal"
+      description="This is a test!"
+      isOpen
+      onChange={() => {}}
+    >
+      Test Children
+    </Modal>
+  )
 }
 
 export default ModalProvider
